@@ -6,7 +6,6 @@ import App from './components/App/App';
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 
-
 const store = createStore(
     combineReducers({
         //enter reducer names here,

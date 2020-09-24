@@ -2,6 +2,17 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux'
 
 class CustomerInfo extends Component {
+    state = {
+        name: '',
+        address: '',
+        city: '',
+        zip: ''
+    }
+    
+        handleChangeFor = () => {
+    
+        }
+
     render() {
         return (
             <div>
@@ -10,25 +21,25 @@ class CustomerInfo extends Component {
                     <input
                         type="text"
                         // value={this.state.newArtist}
-                        onChange={this.handleNameChange}
+                        onChange={this.handleChangeFor}
                         placeholder="Name"
                     />
                     <input
                         type="text"
                         // value={this.state.newArtist}
-                        onChange={this.handleAddressChange}
+                        onChange={this.handleChangeFor}
                         placeholder="Street Address"
                     />
                     <input
                         type="text"
                         // value={this.state.newArtist}
-                        onChange={this.handleCityChange}
+                        onChange={this.handleChangeFor}
                         placeholder="City"
                     />
                     <input
                         type="text"
                         // value={this.state.newArtist}
-                        onChange={this.handleZipChange}
+                        onChange={this.handleChangeFor}
                         placeholder="Zip"
                     />
 

@@ -1,0 +1,14 @@
+
+.pizzaBox{
+    display: flex;
+    flex-direction: column;
+    margin: 40px;
+    height: 350px;
+    width: 275px;
+   
+}
+img{
+    height: 200px;
+    width: 275px;
+   border-radius: 5px;
+}

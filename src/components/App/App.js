@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import { HashRouter as Router, Route, Link } from 'react-router-dom';
 import CustomerInfo from './../../pages/CustomerInfo/CustomerInfo';
 import Pizzas from './../Pizzas/Pizzas';
+import Cart from '../Cart/Cart'
 
 class App extends Component {
 
@@ -40,6 +41,7 @@ class App extends Component {
         <div className="App">
           <header className="App-header">
             <h1 className="App-title">Prime Pizza</h1>
+            <Cart />
           </header>
           <br/>
           <Pizzas />

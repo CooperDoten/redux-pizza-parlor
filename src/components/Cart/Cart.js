@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
 
-class Checkout extends Component {
+class Cart extends Component {
 
     handleCheckout = () => {
         // TODO: Clear the cart and navigate to the product page
@@ -14,7 +14,7 @@ class Checkout extends Component {
         console.log('in checkout ', this.props.reduxState)
         return (
             <div>
-             IN CART.js
+             <p>In our cart</p>
             </div>
         )
     }
@@ -27,4 +27,4 @@ const mapStateToProps = (reduxState) => {
   }
 }
   
-export default connect(mapStateToProps)(Checkout);
+export default connect(mapStateToProps)(Cart);

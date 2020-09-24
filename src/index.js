@@ -5,13 +5,14 @@ import App from './components/App/App';
 // REDUX
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
+import logger from 'redux-logger';
 
 const store = createStore(
     combineReducers({
         //enter reducer names here,
 
     }),
-    applyMiddleware(logger)
+   applyMiddleware(logger)
 );
 
 // ReactDOM.render(<App />, document.getElementById('root'));

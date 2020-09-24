@@ -57,4 +57,4 @@ const putReduxStateOnProps = (reduxState) => ({
     reduxState
 });
 
-export default connect(putReduxStateOnProps)(ArtistForm); 
+export default connect(putReduxStateOnProps)(CustomerInfo); 

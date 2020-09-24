@@ -6,6 +6,33 @@ import { HashRouter as Router, Route, Link } from 'react-router-dom';
 import CustomerInfo from './../../pages/CustomerInfo/CustomerInfo';
 
 class App extends Component {
+
+    state = {
+      pizzas: [],
+    }
+
+    componentDidMount() {
+      this.refreshPizza();
+    }
+
+    refreshPizza = () => {
+      axios({
+        method: 'GET',
+        url: '/api/pizza'
+      }).then(response => {
+        console.log(response);
+        // response.data will be the array of artists
+        this.props.dispatch({
+          type: "SET_PIZZA",
+          payload: response.data
+        })
+        this.setState({
+          pizzas: response.data,
+        });
+      }).catch(err => {
+        console.error('GET error', err)
+      })
+    }
   render() {
     return (
       <Router >

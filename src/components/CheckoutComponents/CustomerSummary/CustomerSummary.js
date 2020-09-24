@@ -3,13 +3,15 @@ import {connect} from 'react-redux';
 
 class Checkout extends Component {
 
-
     render() {
         console.log('in checkout ', this.props.reduxState)
         return (
             <div>
-               IN CUSTOMERSUMMARY.js
-            </div>
+                {/* <p>{this.props.reduxState.customerInfo.customer_name}</p>
+                <p>{this.props.reduxState.customerInfo.pizza.name}</p>
+                <p>{this.props.reduxState.customerInfo.pizza.description}</p>
+                <p>{this.props.reduxState.customerInfo.pizza.price}</p> */}
+                </div>
         )
     }
 }

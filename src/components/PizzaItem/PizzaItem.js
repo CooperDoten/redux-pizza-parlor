@@ -1,25 +1,24 @@
 import React, { Component } from 'react';
-import {connect} from 'react-redux';
+import { connect } from 'react-redux'
 
-class Checkout extends Component {
+class PizzaItem extends Component {
 
-
+    clickPizza = (pizza) => {
+        console.log('Clicked', pizza.name);
+    }
 
     render() {
-        console.log('in checkout ', this.props.reduxState)
         return (
+            <div  className="pizza">
             <div>
-               in PIZZAITEM.js
+                <img src={this.props.pizza.image_path} alt={this.props.pizza.name} onClick={ () => this.clickPizza(this.props.pizza)}/>
+                <h2>{this.props.pizza.name}</h2>
+                <p>{this.props.pizza.description}</p>
+                <p>Price: {this.props.pizza.price}</p>
             </div>
-        )
+        </div>
+        );
     }
 }
 
-const mapStateToProps = (reduxState) => {
-    console.log(reduxState);
-  return {
-      reduxState
-  }
-}
-  
-export default connect(mapStateToProps)(Checkout);
+export default connect()(PizzaItem); 

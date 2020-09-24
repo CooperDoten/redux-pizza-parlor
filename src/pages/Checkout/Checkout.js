@@ -8,7 +8,27 @@ class Checkout extends Component {
         console.log('in checkout ', this.props.reduxState)
         return (
             <div>
-                IN CHECKOUT.js
+                <table>
+                    <thead>
+                        <tr>
+                            <th>
+                                Name
+                            </th>
+                            <th>
+                                Cost
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                            Name of Pizza
+                            </td>
+                          
+                        </tr>
+                        
+                    </tbody>
+                </table>
             </div>
         )
     }

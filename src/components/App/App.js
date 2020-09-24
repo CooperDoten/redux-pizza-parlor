@@ -4,6 +4,7 @@ import './App.css';
 import { connect } from 'react-redux';
 import { HashRouter as Router, Route, Link } from 'react-router-dom';
 import CustomerInfo from './../../pages/CustomerInfo/CustomerInfo';
+import Pizzas from './../Pizzas/Pizzas';
 
 class App extends Component {
 
@@ -41,7 +42,7 @@ class App extends Component {
             <h1 className="App-title">Prime Pizza</h1>
           </header>
           <br/>
-          <img src="images/pizza_photo.png"/>
+          <Pizzas />
           <p>Pizza is great.</p>
         </div>
       </Router>

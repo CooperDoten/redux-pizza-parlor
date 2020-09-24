@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux'
+import { connect } from 'react-redux';
+import './PizzaItem.css'
 
 class PizzaItem extends Component {
 
@@ -9,14 +10,13 @@ class PizzaItem extends Component {
 
     render() {
         return (
-            <div  className="pizza">
-            <div>
+            <div className="pizzaBox">
                 <img src={this.props.pizza.image_path} alt={this.props.pizza.name} onClick={ () => this.clickPizza(this.props.pizza)}/>
-                <h2>{this.props.pizza.name}</h2>
-                <p>{this.props.pizza.description}</p>
-                <p>Price: {this.props.pizza.price}</p>
+                    <h2>{this.props.pizza.name}</h2>
+                    <p>{this.props.pizza.description}</p>
+                    <p>Price: {this.props.pizza.price}</p>
             </div>
-        </div>
+
         );
     }
 }

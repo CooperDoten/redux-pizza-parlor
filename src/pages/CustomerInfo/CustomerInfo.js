@@ -46,7 +46,7 @@ class CustomerInfo extends Component {
 
 {/* *name*, *street address*, *city* and *zip*.  */}
 
-                    <button type="submit">Add Artist</button>
+                    <button type="submit">Add Pizza</button>
                 </form>
             </div>
         )

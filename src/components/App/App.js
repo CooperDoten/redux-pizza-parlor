@@ -6,8 +6,7 @@ import { HashRouter as Router, Route, Link } from 'react-router-dom';
 import CustomerInfo from './../../pages/CustomerInfo/CustomerInfo';
 import Pizzas from './../Pizzas/Pizzas';
 import Cart from '../Cart/Cart'
-import Home from './../../pages/Home/Home'
-import { Button } from '@material-ui/core';
+import Home from './../../pages/Home/Home';
 
 
 class App extends Component {
@@ -66,7 +65,6 @@ class App extends Component {
           </header>
           <br/>
           <Pizzas />
-        <
          
           <div className="checkoutBtnDiv">
           <span>Pizza is great.</span>

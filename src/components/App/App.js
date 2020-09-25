@@ -8,6 +8,7 @@ import Pizzas from './../Pizzas/Pizzas';
 import Cart from '../Cart/Cart'
 import Home from './../../pages/Home/Home'
 
+
 class App extends Component {
 
     state = {
@@ -47,8 +48,17 @@ class App extends Component {
           </header>
           <br/>
           <Pizzas />
+
+         
+          <div className="checkoutBtnDiv">
+          <span>Pizza is great.</span>
+            <CheckoutButton 
+            classname="checkoutBtn"/>
+          </div>
+        </div>
           <p>Pizza is great.</p>
         </div> */}
+
       </Router>
     );
   }

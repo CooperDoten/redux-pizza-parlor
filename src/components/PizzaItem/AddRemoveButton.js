@@ -2,14 +2,11 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 
-class NextButton extends Component {
+class AddRemoveButton extends Component {
 
 state={
     clicked: false
 }
-
-
-
     toggleClick = (event) => {
         this.setState({
             clicked: !this.state.clicked
@@ -20,16 +17,15 @@ state={
     render() {
         return (
    
-                    <button onClick={(event) => this.toggleClick()}>
-                         {
-                this.state.clicked ?
-                'Remove' :
-                'Add'
+                <button onClick={(event) => this.toggleClick()}>
+            {
+                    this.state.clicked ?
+                    'Remove' :
+                    'Add'
             }
-                    </button>
-
+                </button>
         );
     }
 }
 
-export default connect()(NextButton); 
+export default connect()(AddRemoveButton); 

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
 
-class Checkout extends Component {
+class CheckoutButton extends Component {
 
     handleCheckout = () => {
      
@@ -23,4 +23,4 @@ const mapStateToProps = (reduxState) => {
   }
 }
   
-export default connect(mapStateToProps)(Checkout);
+export default connect(mapStateToProps)(CheckoutButton);

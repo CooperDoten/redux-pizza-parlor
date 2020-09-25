@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './PizzaItem.css'
-import NextButton from './NextButton';
+//import NextButton from './NextButton';
+import AddRemoveButton from './AddRemoveButton';
 
 class PizzaItem extends Component {
 
@@ -9,6 +10,10 @@ class PizzaItem extends Component {
 
     pizzaClick = (event) => {
         console.log('Clicked', this.props.pizza.name);
+        this.props.dispatch({
+            type: "ADD_TO_CART",
+            payload: this.props
+        })
     
     }
 
@@ -19,7 +24,7 @@ class PizzaItem extends Component {
                     <h2>{this.props.pizza.name}</h2>
                     <p>{this.props.pizza.description}</p>
                     <p>Price: {this.props.pizza.price}</p>
-                    <NextButton onClick={(event)=> this.pizzaClick}/>
+                    <AddRemoveButton onClick={(event)=> this.pizzaClick}/>
             </div>
 
         );

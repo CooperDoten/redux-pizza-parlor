@@ -3,43 +3,60 @@ import { connect } from 'react-redux'
 
 class CustomerInfo extends Component {
     state = {
-        name: '',
-        address: '',
-        city: '',
-        zip: ''
+
+       customerInfo: { 
+            name: '',
+            address: '',
+            city: '',
+            zip: ''
+        }
     }
     
-        handleChangeFor = () => {
-    
+        handleChangeFor = (event, property) => {
+            this.setState({
+               customerInfo: {
+                   ...this.state.customerInfo,
+                   [property]: event.target.value
+               }
+            });
         }
 
+       sendDataToRedux = () => {
+        this.props.dispatch({
+            type: 'CUSTOMER_INFO',
+            payload: this.state.customerInfo
+        })
+       } 
+
     render() {
+        console.log(this.state.customerInfo);
         return (
             <div>
 
-                <form onSubmit={this.handleInfoSubmit}>
+                <form onSubmit={this.sendDataToRedux}>
                     <input
                         type="text"
                         // value={this.state.newArtist}
-                        onChange={this.handleChangeFor}
+                        onChange={(event) => this.handleChangeFor(event, 'name')}
                         placeholder="Name"
                     />
                     <input
                         type="text"
                         // value={this.state.newArtist}
-                        onChange={this.handleChangeFor}
+                        onChange={(event) => this.handleChangeFor(event, 'address')}
                         placeholder="Street Address"
                     />
+                    
                     <input
                         type="text"
                         // value={this.state.newArtist}
-                        onChange={this.handleChangeFor}
+                        onChange={(event) => this.handleChangeFor(event, 'city')}
                         placeholder="City"
                     />
                     <input
                         type="text"
                         // value={this.state.newArtist}
-                        onChange={this.handleChangeFor}
+                        onChange={(event) => this.handleChangeFor(event, 'zip')}
                         placeholder="Zip"
                     />
 

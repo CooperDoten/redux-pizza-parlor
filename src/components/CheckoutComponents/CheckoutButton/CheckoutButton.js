@@ -25,7 +25,7 @@ class CheckoutButton extends Component {
     }
     render() {
         return(
-            <Button variant="contained" size="small" onClick={() => this.handleCheckout()}>Checkout</Button>
+            <Button onClick={() => this.handleCheckout()}>Checkout</Button>
         );
     };
 };

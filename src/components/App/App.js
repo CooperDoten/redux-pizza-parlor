@@ -6,7 +6,7 @@ import { HashRouter as Router, Route, Link } from 'react-router-dom';
 import CustomerInfo from './../../pages/CustomerInfo/CustomerInfo';
 import Pizzas from './../Pizzas/Pizzas';
 import Cart from '../Cart/Cart'
-import Home from './../../pages/Home/Home'
+import Home from './../../pages/Home/Home';
 
 
 class App extends Component {
@@ -40,7 +40,24 @@ class App extends Component {
   render() {
     return (
       <Router >
-        <Home/>
+
+        <nav>
+          <main>
+          </main>
+        </nav>
+
+        <main>
+          <Route path="/" exact>
+          <Home/>
+          </Route>
+        </main>
+        
+        
+          <Route path="/CustomerInfo" exact>
+            <CustomerInfo/>
+
+          </Route>
+        
         {/* <div className="App">
           <header className="App-header">
             <h1 className="App-title">Prime Pizza</h1>
@@ -48,7 +65,6 @@ class App extends Component {
           </header>
           <br/>
           <Pizzas />
-
          
           <div className="checkoutBtnDiv">
           <span>Pizza is great.</span>

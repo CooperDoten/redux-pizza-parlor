@@ -6,8 +6,6 @@ import AddRemoveButton from './AddRemoveButton';
 
 class PizzaItem extends Component {
 
-
-
     pizzaClick = (event) => {
         console.log('Clicked', this.props.pizza.name);
         this.props.dispatch({

@@ -17,12 +17,28 @@ const pizzaReducer = (state = [], action) => {
         default:
           return state;
       }
+
+}
+
+const cartReducer = (state = [], action) => {
+    console.log('this is what we got', action.payload)
+    if (action.type === 'ADD_TO_CART') {
+        return [...state, action.payload];
+    }
+    else if(action.type === "REMOVE"){
+       let pizzaToRemove = state.indexOf(action.payload);
+       console.log(pizzaToRemove);
+       state.splice(pizzaToRemove, 1);
+       return [...state]
+    }
+    return state;
 }
 
 
 const store = createStore(
     combineReducers({
        pizzaReducer,
+       cartReducer
     }),
    applyMiddleware(logger)
 );

@@ -46,6 +46,7 @@ class CustomerInfo extends Component {
                         onChange={(event) => this.handleChangeFor(event, 'address')}
                         placeholder="Street Address"
                     />
+                    
                     <input
                         type="text"
                         // value={this.state.newArtist}

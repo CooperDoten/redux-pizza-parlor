@@ -25,7 +25,7 @@ class App extends Component {
         url: '/api/pizza'
       }).then(response => {
         console.log(response);
-        // response.data will be the array of artists
+        // response.data will be the array of pizzas
         this.props.dispatch({
           type: "SET_PIZZA",
           payload: response.data

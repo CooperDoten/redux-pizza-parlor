@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Pizzas from '../../components/Pizzas/Pizzas';
+import Cart from '../../components/Cart/Cart'
 
 class Home extends Component{
     render(){
